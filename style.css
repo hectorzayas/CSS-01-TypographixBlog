@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: whitesmoke;
+
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+.main {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.featured-article img, .article img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Sticky Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5%;
+    color: rgb(55, 55, 55);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 60px;
+    background: whitesmoke;
+}
+
+.nav-left h1 {
+    font-size: 3rem;
+    transition: font-size 0.3s;
+}
+
+#navbar.scrolled .nav-left h1 {
+    font-size: 1.5rem;
+}
+
+.nav-right a {
+    margin-left: 20px;
+    color: hsl(0, 0%, 13%);
+}
+
+    .nav-right a:hover {
+        color: hsl(0, 0%, 35%);
+    }
+
+/* Featured Article Styles */
+.featured-article {
+    margin-bottom: 50px;
+}
+
+    .featured-article h1 {
+        font-size: 2.5rem;
+        margin: 15px 0;
+    }
+
+    .featured-article p {
+        font-size: 1.2rem;
+        color: rgb(111, 111, 111);
+        margin-bottom: 20px;
+    }
+
+    /* Smaller Articles Styles */
+    .smaller-articles {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .article {
+        flex: 1;
+        margin: 0 15px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .article h2 {
+            font-size: 1.4rem;
+            margin: 15px 0;
+        }
+
+        .article p {
+            font-size: 1rem;
+            color: rgb(111, 111, 111);
+            flex-grow: 2;
+        }
+
+a {
+    text-decoration: none;
+    color: hsl(205, 100%, 50%);
+    transition: color 0.3s;
+}
+
+    a:hover {
+        color: hsl(205, 100%, 35%);
+    }
+
+/* Footer */
+footer {
+    color: rgb(55, 55, 55);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+    .social-icons a {
+        margin: 0 10px;
+        color: hsl(0, 0%, 13%);
+        transition: color 0.3s;
+        font-size: 1.5rem;
+    }
+
+    .social-icons a:hover {
+        color: hsl(0, 0%, 35%);
+    }
+
+/* Skeleton Styles */
+.featured-article-skeleton {
+    margin-bottom: 50px;
+}
+
+.article-skeleton {
+    flex: 1;
+    margin: 0 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skeleton-image {
+    height: 300px;
+}
+
+.skeleton-line {
+    height: 25px;
+    margin-bottom: 15px;
+}
+
+.skeleton-image, .skeleton-line {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.skeleton-line--large {
+    height: 40px;
+    margin: 40px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Media Queries -------------------- */
+@media screen and (max-width: 1025px) {
+    .nav-left h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .main {
+        width: 90%;
+    }
+
+    .featured-article h1 {
+        font-size: 2.2rem;
+    }
+
+    .article h2 {
+        font-size: 1.75rem;
+    }
+
+    .smaller-articles {
+        flex-direction: column;
+    }
+
+    .article {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px 5%;
+    }
+
+    .nav-right a {
+        margin-left: unset;
+        margin-right: 20px;
+    }
+}
