@@ -1,0 +1,10 @@
+.main {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.featured-article img, .article img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}

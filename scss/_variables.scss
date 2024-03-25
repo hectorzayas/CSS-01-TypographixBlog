@@ -1,0 +1,26 @@
+// Colors, Fonts, etc
+$font-stack: "Nunito Sans", sans-serif;
+
+:root {
+    --background: rgb(255, 255, 255);
+    --primary-color: hsl(215, 100%, 50%);
+    --primary-font-color: rgb(85, 85, 85);
+    --secondary-font-color: rgb(55, 55, 55);
+    --skeleton-bg-start: #f0f0f0;
+    --skeleton-bg-middle: #e0e0e0;
+    --skeleton-bg-end: #f0f0f0;
+    --box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    --box-shadow-container: var(--background);
+}
+
+[data-theme="dark"] {
+    --background: rgb(18, 18, 18);
+    --primary-color: hsl(215, 100%, 75%);
+    --primary-font-color: rgb(150, 150, 150);
+    --secondary-font-color: rgb(200, 200, 200);
+    --skeleton-bg-start: #3b3b3b;
+    --skeleton-bg-middle: #2a2a2a;
+    --skeleton-bg-end: #3b3b3b;
+    --box-shadow: none;
+    --box-shadow-container: rgb(31, 31, 31);
+}
